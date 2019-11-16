@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71ed9ba2-c48a-4afe-9fa3-a423d8720f45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/addEditMoviesForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/addEditMoviesForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/uploadFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/uploadFiles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,9 +73,16 @@
       <option name="presentableId" value="Default" />
       <updated>1573507973975</updated>
       <workItem from="1573507975637" duration="1218000" />
-      <workItem from="1573933221578" duration="60000" />
+      <workItem from="1573933221578" duration="1939000" />
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add component upload form (not working)">
+      <created>1573933468233</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573933468233</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +104,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="automatic add new file" />
     <MESSAGE value="ready to development" />
-    <option name="LAST_COMMIT_MESSAGE" value="ready to development" />
+    <MESSAGE value="add component upload form (not working)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add component upload form (not working)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/addEditMoviesForm.js</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

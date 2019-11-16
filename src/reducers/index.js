@@ -1,6 +1,7 @@
 const myState = Object.create(null);
 myState.welcome = 'HI';
-
+myState.showFileUploadForm = false;
+myState.showAddEditMovieForm = false;
 
 function reducer(state = myState, action) {
     switch (action.type) {
