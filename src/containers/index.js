@@ -1,12 +1,11 @@
 import React, {Fragment} from 'react'
-import Upload from './uploadFiles'
-import AddEditMovie from "./addEditMoviesForm";
+
+import NavBar from "./navBar";
 
 
 const Main = () => (
     <Fragment>
-        <Upload/>
-        <AddEditMovie/>
+        <NavBar/>
     </Fragment>
 );
 
