@@ -1,9 +1,10 @@
 import { connect } from 'react-redux'
 import NavBar from '../components/navBar'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({fileUpload, addEditMovieForm}) => {
     return {
-        state
+        fileUpload,
+        addEditMovieForm
     };
 };
 

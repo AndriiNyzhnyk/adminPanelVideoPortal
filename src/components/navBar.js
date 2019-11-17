@@ -3,18 +3,16 @@ import React, {Fragment} from 'react'
 import Upload from '../containers/uploadFiles'
 import MovieEditForm from "../containers/addEditMoviesForm";
 
-const NavBar = ({state}) => {
-    const {showFileUploadForm, showAddEditMovieForm} = state;
-
-
+const NavBar = ({fileUpload, addEditMovieForm}) => {
 
 
     return (
         <Fragment>
             <p>nav bar</p>
-            {console.log(state)}
-            { showFileUploadForm ? <Upload/> : null }
-            { showAddEditMovieForm ? <MovieEditForm/> : null}
+            {console.log(fileUpload, addEditMovieForm)}
+
+            { fileUpload.show ? <Upload/> : null }
+            { addEditMovieForm.show ? <MovieEditForm/> : null}
 
         </Fragment>
     );

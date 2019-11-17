@@ -1,10 +1,8 @@
 import { connect } from 'react-redux'
 import AddEditMovie from '../components/addEditMoviesForm'
 
-const mapStateToProps = (state) => {
-    return {
-        showForm: state.showAddEditMovieForm
-    };
+const mapStateToProps = () => {
+    return {};
 };
 
 // const mapDispatchToProps = (dispatch) => {

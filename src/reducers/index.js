@@ -1,7 +1,16 @@
 const myState = Object.create(null);
-myState.welcome = 'HI';
-myState.showFileUploadForm = true;
-myState.showAddEditMovieForm = true;
+
+myState.fileUpload = {
+    show: true,
+    textWhenOpen: 'Close Upload form',
+    textWhenClose: 'Open Upload form'
+};
+
+myState.addEditMovieForm = {
+    show: true,
+    textWhenOpen: 'Close form',
+    textWhenClose: 'Open form'
+};
 
 function reducer(state = myState, action) {
     switch (action.type) {

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const AddEditMovie = ({showForm}) => {
+const AddEditMovie = () => {
 
-    return showForm ? (
+    return (
         <form name="filmForm" id="filmForm">
             <input type="hidden" name="id" value="0"/>
             <div className="form-group">
@@ -85,7 +85,7 @@ const AddEditMovie = ({showForm}) => {
             {/*    <a id="reset" className="btn btn-sm btn-primary">Очистити</a>*/}
             {/*</div>*/}
         </form>
-    ) : null;
+    );
 };
 
 export default AddEditMovie;
