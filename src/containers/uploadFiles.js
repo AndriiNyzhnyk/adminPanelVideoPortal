@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import UploadFiles from '../components/uploadFiles';
-import {addFileForUpload} from '../actions';
+import {addFileForUpload, sendFileToServer} from '../actions';
 
 const mapStateToProps = (state) => {
     return {
@@ -13,11 +13,14 @@ const mapDispatchToProps = (dispatch) => {
         onChangeHandler: (e) => {
             // dispatch(increment());
             console.log('change');
-            console.log(e.target.files[0])
+            console.log(e.target.files[0]);
 
             dispatch(addFileForUpload(e.target.files[0]));
+        },
 
 
+        sendFile: (e) => {
+            dispatch(sendFileToServer(e));
         }
     };
 };

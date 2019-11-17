@@ -1,9 +1,6 @@
-
-
 export const changeDisplayStatusFileUpload = () => {
     return {
         type: 'changeDisplayStatusFileUpload'
-
     }
 };
 
@@ -17,5 +14,12 @@ export const addFileForUpload = (file) => {
     return {
         type: 'addFileForUpload',
         file
+    }
+};
+
+export const sendFileToServer = (event) => {
+    return {
+        type: 'sendFileToServer',
+        event
     }
 };
