@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import {changeDisplayStatusFileUpload, changeDisplayStatusAddEditForm} from '../actions'
 import NavBar from '../components/navBar'
 
 const mapStateToProps = ({fileUpload, addEditMovieForm}) => {
@@ -8,12 +9,21 @@ const mapStateToProps = ({fileUpload, addEditMovieForm}) => {
     };
 };
 
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         increment: () => {
-//             dispatch(increment());
-//         }
-//     };
-// };
+const mapDispatchToProps = (dispatch) => {
 
-export default connect(mapStateToProps)(NavBar);
+    console.log(dispatch);
+    return {
+        changeDisplayStatusFileUpload: () => {
+            console.log('changeDisplayStatusFileUpload');
+            dispatch(changeDisplayStatusFileUpload());
+        },
+
+        changeDisplayStatusAddEditForm: () => {
+            console.log('changeDisplayStatusAddEditForm');
+            dispatch(changeDisplayStatusAddEditForm());
+        },
+
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

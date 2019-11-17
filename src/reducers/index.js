@@ -1,23 +1,31 @@
 const myState = Object.create(null);
 
 myState.fileUpload = {
-    show: true,
+    show: false,
     textWhenOpen: 'Close Upload form',
     textWhenClose: 'Open Upload form'
 };
 
 myState.addEditMovieForm = {
-    show: true,
+    show: false,
     textWhenOpen: 'Close form',
     textWhenClose: 'Open form'
 };
 
 function reducer(state = myState, action) {
     switch (action.type) {
-        case 'test':
-            console.log('test');
+        case 'changeDisplayStatusFileUpload':
+            const fileUpload = {...state.fileUpload};
+            fileUpload.show = !fileUpload.show;
 
-            return state;
+            return {...state, fileUpload};
+
+
+        case 'changeDisplayStatusAddEditForm':
+            const addEditMovieForm = {...state.addEditMovieForm};
+            addEditMovieForm.show = !addEditMovieForm.show;
+
+            return {...state, addEditMovieForm};
 
 
         default:

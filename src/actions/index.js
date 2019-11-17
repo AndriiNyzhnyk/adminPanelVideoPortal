@@ -1,7 +1,14 @@
-export const testTest = () => {
+
+
+export const changeDisplayStatusFileUpload = () => {
     return {
-        type: 'test',
-        data: 'String'
+        type: 'changeDisplayStatusFileUpload'
+
     }
 };
 
+export const changeDisplayStatusAddEditForm = () => {
+    return {
+        type: 'changeDisplayStatusAddEditForm'
+    }
+};
