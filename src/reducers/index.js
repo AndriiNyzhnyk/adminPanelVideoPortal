@@ -3,7 +3,8 @@ const myState = Object.create(null);
 myState.fileUpload = {
     show: false,
     textWhenOpen: 'Close Upload form',
-    textWhenClose: 'Open Upload form'
+    textWhenClose: 'Open Upload form',
+    selectedFile: null
 };
 
 myState.addEditMovieForm = {
@@ -26,6 +27,15 @@ function reducer(state = myState, action) {
             addEditMovieForm.show = !addEditMovieForm.show;
 
             return {...state, addEditMovieForm};
+
+        case 'addFileForUpload':
+            const {file} = action;
+            const prevState = {...state.fileUpload};
+            prevState.selectedFile = file;
+
+            console.log(prevState);
+
+            return {...state, fileUpload: prevState};
 
 
         default:

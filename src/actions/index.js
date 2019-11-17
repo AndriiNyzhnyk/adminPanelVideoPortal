@@ -12,3 +12,10 @@ export const changeDisplayStatusAddEditForm = () => {
         type: 'changeDisplayStatusAddEditForm'
     }
 };
+
+export const addFileForUpload = (file) => {
+    return {
+        type: 'addFileForUpload',
+        file
+    }
+};

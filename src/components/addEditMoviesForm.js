@@ -4,7 +4,7 @@ const AddEditMovie = () => {
 
     return (
         <form name="filmForm" id="filmForm">
-            <input type="hidden" name="id" value="0"/>
+            <input type="hidden" name="id" defaultValue="0"/>
             <div className="form-group">
                 <label htmlFor="nameUa">Name Film ua:</label>
                 <input type="text" className="form-control" name="nameUa" required autoComplete="off"/>
