@@ -20,3 +20,16 @@ code {
 input {
   margin: 0 0 0 25px;
 }
+
+.panel-body {
+  margin: 7px;
+  padding: 5px;
+}
+
+.resolve, .reject {
+  margin: 0 10px;
+
+}
+.resolve:hover, .reject:hover {
+  cursor: pointer;
+}
