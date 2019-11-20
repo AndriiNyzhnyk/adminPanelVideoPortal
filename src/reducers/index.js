@@ -33,27 +33,22 @@ function reducer(state = myState, action) {
             const prevState = {...state.fileUpload};
             prevState.selectedFile = file;
 
-            console.log(prevState);
+            console.log('prevState', prevState);
 
             return {...state, fileUpload: prevState};
 
 
         case 'sendFileToServer':
-            const e = action.event;
-            e.preventDefault();
-
             const data = new FormData();
             data.append('file', state.fileUpload.selectedFile);
             console.log(data);
-
-             fetch('/upload', {
+            console.log('before fetch');
+            fetch('/upload', {
                 method: 'POST',
-                body: JSON.stringify(data)
-            }).then((data) => {
-                 console.log(data);
-             });
+                body: data
+            }).then(console.log).catch(console.error);
 
-
+            return state;
             break;
 
 

@@ -12,14 +12,14 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onChangeHandler: (e) => {
             // dispatch(increment());
-            console.log('change');
-            console.log(e.target.files[0]);
+            console.log('change', e.target.files[0]);
 
             dispatch(addFileForUpload(e.target.files[0]));
         },
 
 
         sendFile: (e) => {
+            console.log('sendFileToServer', e);
             dispatch(sendFileToServer(e));
         }
     };

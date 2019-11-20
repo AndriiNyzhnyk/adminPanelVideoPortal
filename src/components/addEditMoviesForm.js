@@ -80,10 +80,10 @@ const AddEditMovie = () => {
                 <input type="text" className="form-control" name="firstRun" required autoComplete="off"/>
             </div>
 
-            <div className="panel-body">
-                <button type="submit" className="resolve">Зберегти</button>
-                <a id="reset" className="reject">Очистити</a>
-            </div>
+            {/*<div className="panel-body">*/}
+            {/*    <button type="submit" className="resolve">Зберегти</button>*/}
+            {/*    <a href="#" id="reset" className="reject">Очистити</a>*/}
+            {/*</div>*/}
         </form>
     );
 };
