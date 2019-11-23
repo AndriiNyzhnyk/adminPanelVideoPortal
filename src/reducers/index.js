@@ -15,20 +15,21 @@ myState.addEditMovieForm = {
 
 function reducer(state = myState, action) {
     switch (action.type) {
-        case 'changeDisplayStatusFileUpload':
+        case 'changeDisplayStatusFileUpload': {
             const fileUpload = {...state.fileUpload};
             fileUpload.show = !fileUpload.show;
 
             return {...state, fileUpload};
+        }
 
-
-        case 'changeDisplayStatusAddEditForm':
+        case 'changeDisplayStatusAddEditForm': {
             const addEditMovieForm = {...state.addEditMovieForm};
             addEditMovieForm.show = !addEditMovieForm.show;
 
             return {...state, addEditMovieForm};
+        }
 
-        case 'addFileForUpload':
+        case 'addFileForUpload': {
             const {file} = action;
             const prevState = {...state.fileUpload};
             prevState.selectedFile = file;
@@ -36,24 +37,28 @@ function reducer(state = myState, action) {
             console.log('prevState', prevState);
 
             return {...state, fileUpload: prevState};
+        }
 
-
-        case 'sendFileToServer':
+        case 'sendFileToServer': {
             const data = new FormData();
             data.append('file', state.fileUpload.selectedFile);
             console.log(data);
-            console.log('before fetch');
+
             fetch('/upload', {
                 method: 'POST',
                 body: data
-            }).then(console.log).catch(console.error);
+            }).then(() => {
+                return state;
+            }).catch(console.error);
 
-            return state;
             break;
+        }
 
 
-        default:
+        default: {
             return state
+        }
+
     }
 }
 
