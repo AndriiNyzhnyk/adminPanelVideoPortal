@@ -1,89 +1,194 @@
 import React from 'react'
 
-const AddEditMovie = () => {
+const AddEditMovie = ({values, saveData, clearFields, changeValueField}) => {
 
     return (
         <form name="filmForm" id="filmForm">
             <input type="hidden" name="id" defaultValue="0"/>
             <div className="form-group">
                 <label htmlFor="nameUa">Name Film ua:</label>
-                <input type="text" className="form-control" name="nameUa" required autoComplete="off"/>
+                <input type="text"
+                       className="form-control"
+                       name="nameUa"
+                       value={values['nameUa']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="nameEn">Name Film en:</label>
-                <input type="text" className="form-control" name="nameEn" required autoComplete="off"/>
+                <input type="text"
+                       className="form-control"
+                       name="nameEn"
+                       value={values['nameEn']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
-                <label htmlFor="sourseImg">Sourse Img:</label>
-                <input type="text" className="form-control" name="sourseImg" required autoComplete="off"/>
+                <label htmlFor="sourceImg">Source Img:</label>
+                <input type="text"
+                       className="form-control"
+                       name="sourceImg"
+                       value={values['sourceImg']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
-                <label htmlFor="sourseVideo">Sourse Video:</label>
-                <input type="text" className="form-control" name="sourseVideo" required autoComplete="off"/>
+                <label htmlFor="sourceVideo">Source Video:</label>
+                <input type="text"
+                       className="form-control"
+                       name="sourceVideo"
+                       value={values['sourceVideo']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="qualityVideo">Quality Video:</label>
-                <input type="text" className="form-control" name="qualityVideo" required autoComplete="off"/>
+                <input type="text"
+                       className="form-control"
+                       name="qualityVideo"
+                       value={values['qualityVideo']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="translation">Translation:</label>
-                <input type="text" className="form-control" name="translation" required autoComplete="off"/>
+                <input type="text"
+                       className="form-control"
+                       name="translation"
+                       value={values['translation']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="motto">Motto:</label>
-                <input type="text" className="form-control" name="motto" required autoComplete="off"/>
+                <input type="text"
+                       className="form-control"
+                       name="motto"
+                       value={values['motto']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="year">Year:</label>
-                <input type="number" className="form-control" name="year" required autoComplete="off"/>
+                <input type="number"
+                       className="form-control"
+                       name="year"
+                       value={values['year']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="country">Country:</label>
-                <input type="text" className="form-control" name="country" required autoComplete="off"/>
+                <input type="text"
+                       className="form-control"
+                       name="country"
+                       value={values['country']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="genre">Genre:</label>
-                <input type="text" className="form-control" name="genre" required autoComplete="off"/>
+                <input type="text"
+                       className="form-control"
+                       name="genre"
+                       value={values['genre']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="category">Category:</label>
-                <input type="text" className="form-control" name="category" required autoComplete="off"/>
+                <input type="text"
+                       className="form-control"
+                       name="category"
+                       value={values['category']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="producer">Producer:</label>
-                <input type="text" className="form-control" name="producer" required autoComplete="off"/>
+                <input type="text"
+                       className="form-control"
+                       name="producer"
+                       value={values['producer']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="duration">Duration:</label>
-                <input type="number" className="form-control" name="duration" required autoComplete="off"/>
+                <input type="number"
+                       className="form-control"
+                       name="duration"
+                       value={values['duration']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="age">Age:</label>
-                <input type="number" className="form-control" name="age" required autoComplete="off"/>
+                <input type="number"
+                       className="form-control"
+                       name="age"
+                       value={values['age']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
             <div className="form-group">
                 <label htmlFor="firstRun">First run:</label>
-                <input type="text" className="form-control" name="firstRun" required autoComplete="off"/>
+                <input type="text"
+                       className="form-control"
+                       name="firstRun"
+                       value={values['firstRun']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
             </div>
 
-            {/*<div className="panel-body">*/}
-            {/*    <button type="submit" className="resolve">Зберегти</button>*/}
-            {/*    <a href="#" id="reset" className="reject">Очистити</a>*/}
-            {/*</div>*/}
+            <div className="panel-body">
+                <button type="button" className="resolve" onClick={saveData}>Save</button>
+                <button type="button" className="reject" onClick={clearFields}>reject</button>
+            </div>
         </form>
     );
 };
