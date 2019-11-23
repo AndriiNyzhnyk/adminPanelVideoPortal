@@ -5,7 +5,7 @@ const UploadForm = ({onChangeHandler, sendFile}) => {
         <form className="fileUpload" > {/* action="" method="POST"  enctype="multipart/form-data" */}
             <h1>Upload File Here</h1>
             <input type="file" name="file" defaultValue="" onChange={onChangeHandler}/><br/><br/>
-            <input type="button" onClick={sendFile}/>
+            <input type="button" onClick={sendFile} value="Send"/>
         </form>
     )
 };
