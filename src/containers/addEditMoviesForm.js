@@ -20,15 +20,10 @@ const mapDispatchToProps = (dispatch) => {
         },
 
         changeValueField: (e) => {
-            console.log(e.target);
-            console.log(e.target.name);
-            console.log(e.target.value);
-
             const data = {
                 name: e.target.name,
                 value: e.target.value
             };
-
 
             dispatch(changeFieldsAddEditForm(data));
         }

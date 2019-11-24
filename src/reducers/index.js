@@ -76,6 +76,18 @@ function reducer(state = myState, action) {
 
         case 'saveNewMovie': {
             console.log('save reducer');
+
+            fetch('/new-movies', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8'
+                },
+                body: JSON.stringify(state.addEditMovieForm.values)
+            }).then((data) => {
+                console.log(data);
+                return state;
+            }).catch(console.error);
+
             return state;
         }
 
