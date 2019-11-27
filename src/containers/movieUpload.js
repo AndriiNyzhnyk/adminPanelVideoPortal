@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import UploadFiles from '../components/uploadFiles';
-import {addFileForUpload, sendFileToServer} from '../actions';
+import movieUpload from '../components/movieUpload';
+import {addMovieForUpload, sendFileToServer} from '../actions';
 
 const mapStateToProps = (state) => {
     return {
@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch) => {
             // dispatch(increment());
             console.log('change', e.target.files[0]);
 
-            dispatch(addFileForUpload(e.target.files[0]));
+            dispatch(addMovieForUpload(e.target.files[0]));
         },
 
 
@@ -25,6 +25,6 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-const Upload = connect(mapStateToProps, mapDispatchToProps)(UploadFiles);
+const Upload = connect(mapStateToProps, mapDispatchToProps)(movieUpload);
 
 export default Upload;

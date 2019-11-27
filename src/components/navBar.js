@@ -1,10 +1,10 @@
 import React, {Fragment} from 'react'
 
-import Upload from '../containers/uploadFiles'
+import MovieUpload from '../containers/movieUpload'
 import MovieEditForm from "../containers/addEditMoviesForm";
 
-const NavBar = ({fileUpload, addEditMovieForm, changeDisplayStatusFileUpload, changeDisplayStatusAddEditForm}) => {
-    const textButtonFileUpload = fileUpload.show ? fileUpload.textWhenOpen : fileUpload.textWhenClose;
+const NavBar = ({movieUpload, addEditMovieForm, changeDisplayStatusUploadMovie, changeDisplayStatusAddEditForm}) => {
+    const textButtonFileUpload = movieUpload.show ? movieUpload.textWhenOpen : movieUpload.textWhenClose;
     const textButtonEditForm = addEditMovieForm.show ? addEditMovieForm.textWhenOpen : addEditMovieForm.textWhenClose;
 
 
@@ -13,12 +13,12 @@ const NavBar = ({fileUpload, addEditMovieForm, changeDisplayStatusFileUpload, ch
             <p>nav bar</p>
 
             <form action="">
-                <input type="button" value={textButtonFileUpload} onClick={changeDisplayStatusFileUpload}/>
+                <input type="button" value={textButtonFileUpload} onClick={changeDisplayStatusUploadMovie}/>
                 <input type="button" value={textButtonEditForm} onClick={changeDisplayStatusAddEditForm}/>
             </form>
-            {console.log(fileUpload, addEditMovieForm)}
+            {console.log(movieUpload, addEditMovieForm)}
 
-            { fileUpload.show ? <Upload/> : null }
+            { movieUpload.show ? <MovieUpload/> : null }
             { addEditMovieForm.show ? <MovieEditForm/> : null}
 
         </Fragment>

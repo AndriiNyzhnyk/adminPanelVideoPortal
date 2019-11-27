@@ -1,6 +1,6 @@
-export const changeDisplayStatusFileUpload = () => {
+export const changeDisplayStatusMovieUpload = () => {
     return {
-        type: 'changeDisplayStatusFileUpload'
+        type: 'changeDisplayStatusMovieUpload'
     };
 };
 
@@ -10,9 +10,9 @@ export const changeDisplayStatusAddEditForm = () => {
     };
 };
 
-export const addFileForUpload = (file) => {
+export const addMovieForUpload = (file) => {
     return {
-        type: 'addFileForUpload',
+        type: 'addMovieForUpload',
         file
     };
 };

@@ -1,9 +1,9 @@
 const myState = Object.create(null);
 
-myState.fileUpload = {
+myState.movieUpload = {
     show: false,
-    textWhenOpen: 'Close Upload form',
-    textWhenClose: 'Open Upload form',
+    textWhenOpen: 'Close Upload movie form',
+    textWhenClose: 'Open Upload movie form',
     selectedFile: null
 };
 
@@ -12,7 +12,7 @@ myState.addEditMovieForm = {
     textWhenOpen: 'Close form',
     textWhenClose: 'Open form',
     values: {
-        nameUa: 'Test test',
+        nameUa: 'Test test 123',
         nameEn: '',
         sourceImg: '',
         sourceVideo: '',
@@ -32,11 +32,11 @@ myState.addEditMovieForm = {
 
 function reducer(state = myState, action) {
     switch (action.type) {
-        case 'changeDisplayStatusFileUpload': {
-            const fileUpload = {...state.fileUpload};
-            fileUpload.show = !fileUpload.show;
+        case 'changeDisplayStatusMovieUpload': {
+            const movieUpload = {...state.movieUpload};
+            movieUpload.show = !movieUpload.show;
 
-            return {...state, fileUpload};
+            return {...state, movieUpload};
         }
 
         case 'changeDisplayStatusAddEditForm': {
@@ -46,7 +46,7 @@ function reducer(state = myState, action) {
             return {...state, addEditMovieForm};
         }
 
-        case 'addFileForUpload': {
+        case 'addMovieForUpload': {
             const {file} = action;
             const prevState = {...state.fileUpload};
             prevState.selectedFile = file;

@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
-import {changeDisplayStatusFileUpload, changeDisplayStatusAddEditForm} from '../actions'
+import {changeDisplayStatusMovieUpload, changeDisplayStatusAddEditForm} from '../actions'
 import NavBar from '../components/navBar'
 
-const mapStateToProps = ({fileUpload, addEditMovieForm}) => {
+const mapStateToProps = ({movieUpload, addEditMovieForm}) => {
     return {
-        fileUpload,
+        movieUpload,
         addEditMovieForm
     };
 };
@@ -13,9 +13,9 @@ const mapDispatchToProps = (dispatch) => {
 
     console.log(dispatch);
     return {
-        changeDisplayStatusFileUpload: () => {
-            console.log('changeDisplayStatusFileUpload');
-            dispatch(changeDisplayStatusFileUpload());
+        changeDisplayStatusUploadMovie: () => {
+            console.log('changeDisplayStatusMovieUpload');
+            dispatch(changeDisplayStatusMovieUpload());
         },
 
         changeDisplayStatusAddEditForm: () => {
