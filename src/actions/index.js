@@ -4,6 +4,13 @@ export const changeDisplayStatusMovieUpload = () => {
     };
 };
 
+export const changeDisplayStatusImageUpload = () => {
+    return {
+        type: 'changeDisplayStatusImageUpload'
+    };
+};
+
+
 export const changeDisplayStatusAddEditForm = () => {
     return {
         type: 'changeDisplayStatusAddEditForm'
@@ -17,9 +24,23 @@ export const addMovieForUpload = (file) => {
     };
 };
 
-export const sendFileToServer = (event) => {
+export const addImageForUpload = (file) => {
     return {
-        type: 'sendFileToServer',
+        type: 'addImageForUpload',
+        file
+    };
+};
+
+export const sendImageToServer = (event) => {
+    return {
+        type: 'sendImageToServer',
+        event
+    };
+};
+
+export const sendMovieToServer = (event) => {
+    return {
+        type: 'sendMovieToServer',
         event
     };
 };
