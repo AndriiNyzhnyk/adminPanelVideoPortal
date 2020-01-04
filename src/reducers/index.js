@@ -32,7 +32,7 @@ myState.addEditMovieForm = {
         category: '',
         producer: '',
         duration: '',
-        age: '',
+        age: '12', // default value 12
         firstRun: ''
     }
 };

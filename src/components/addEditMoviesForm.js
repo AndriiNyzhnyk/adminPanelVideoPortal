@@ -180,14 +180,18 @@ const AddEditMovie = ({values, saveData, clearFields, changeValueField}) => {
 
             <div className="form-group">
                 <label htmlFor="age">Age:</label>
-                <input type="number"
-                       className="form-control"
-                       name="age"
-                       value={values['age']}
-                       onChange={changeValueField}
-                       required
-                       autoComplete="off"
-                />
+                <select
+                    onChange={changeValueField}
+                    name="age"
+                    className="form-control"
+                    value={values['age']}
+                    required >
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="21">21</option>
+                </select>
             </div>
 
             <div className="form-group">
