@@ -1,4 +1,12 @@
-import React from 'react'
+import React from 'react';
+
+const startYear = 2000;
+const endYear = new Date().getFullYear();
+
+const years = [];
+for(let i = startYear; i <= endYear; ++i) {
+    years.push(i);
+}
 
 const AddEditMovie = ({values, saveData, clearFields, changeValueField}) => {
 
@@ -96,14 +104,18 @@ const AddEditMovie = ({values, saveData, clearFields, changeValueField}) => {
 
             <div className="form-group">
                 <label htmlFor="year">Year:</label>
-                <input type="number"
-                       className="form-control"
-                       name="year"
-                       value={values['year']}
-                       onChange={changeValueField}
-                       required
-                       autoComplete="off"
-                />
+                <select
+                    className="form-control"
+                    name="year"
+                    value={values['year']}
+                    onChange={changeValueField}
+                    required >
+                    {
+                        years.map((year) => {
+                            return (<option value={year}>{year}</option>);
+                        })
+                    }
+                </select>
             </div>
 
             <div className="form-group">

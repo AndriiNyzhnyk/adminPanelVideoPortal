@@ -26,7 +26,7 @@ myState.addEditMovieForm = {
         qualityVideo: '144', // default value 144p
         translation: '',
         motto: '',
-        year: '',
+        year: '2000 ', // default value 2000
         country: '',
         genre: '',
         category: '',
