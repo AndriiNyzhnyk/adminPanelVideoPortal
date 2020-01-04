@@ -55,14 +55,19 @@ const AddEditMovie = ({values, saveData, clearFields, changeValueField}) => {
 
             <div className="form-group">
                 <label htmlFor="qualityVideo">Quality Video:</label>
-                <input type="text"
-                       className="form-control"
-                       name="qualityVideo"
-                       value={values['qualityVideo']}
-                       onChange={changeValueField}
-                       required
-                       autoComplete="off"
-                />
+                <select
+                    onChange={changeValueField}
+                    name="qualityVideo"
+                    className="form-control"
+                    value={values['qualityVideo']}
+                    required >
+                    <option value="144">144p</option>
+                    <option value="240">240p</option>
+                    <option value="360">360p</option>
+                    <option value="480">480p</option>
+                    <option value="720">720p</option>
+                    <option value="1080">1080p</option>
+                </select>
             </div>
 
             <div className="form-group">

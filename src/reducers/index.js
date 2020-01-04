@@ -23,7 +23,7 @@ myState.addEditMovieForm = {
         nameEn: '',
         sourceImg: '',
         sourceVideo: '',
-        qualityVideo: '',
+        qualityVideo: '144', // default value 144p
         translation: '',
         motto: '',
         year: '',
