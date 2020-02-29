@@ -35,14 +35,12 @@ function getSorting(order, orderBy) {
 
 const headCells = [
   { id: 'thumbnail', numeric: false, disablePadding: false, label: 'Cover' },
+  { id: 'nameEn', numeric: false, disablePadding: false, label: 'NameEN' },
+  { id: 'nameUa', numeric: false, disablePadding: false, label: 'NameUA' },
+  { id: 'producer', numeric: true, disablePadding: false, label: 'Producer' },
   { id: 'year', numeric: true, disablePadding: false, label: 'Year' },
-  { id: 'genres', numeric: false, disablePadding: false, label: 'Genres' },
-  { id: 'name', numeric: false, disablePadding: false, label: 'Name' },
-  { id: 'actors', numeric: false, disablePadding: false, label: 'Actors' },
-  { id: 'other1', numeric: false, disablePadding: false, label: ',,,' },
-  { id: 'other2', numeric: false, disablePadding: false, label: ',,,' },
-  { id: 'other3', numeric: false, disablePadding: false, label: ',,,' },
-  { id: 'other4', numeric: false, disablePadding: false, label: ',,,' },
+  { id: 'artist', numeric: false, disablePadding: false, label: 'Artist' },
+  { id: 'views', numeric: false, disablePadding: false, label: 'Views' },
 ];
 
 function EnhancedTableHead(props) {
@@ -174,17 +172,16 @@ export default function MoviesTable({ items, setOptions, setSearch }) {
                   >
                     <TableCell scope="row" padding="none">
                       <div className={classes.cover}>
-                        <img src={row.thumbnail} alt="cover" />
+                        <img src={`movie/static/images/${row.sourceImg}`} alt="cover" />
                       </div>
                     </TableCell>
+                    <TableCell scope="row">{row.nameEn}</TableCell>
+                    <TableCell scope="row">{row.nameUa}</TableCell>
+                    <TableCell>{row.producer}</TableCell>
                     <TableCell>{row.year}</TableCell>
-                    <TableCell>{row.genres}</TableCell>
-                    <TableCell scope="row">{row.name}</TableCell>
-                    <TableCell>{row.actors}</TableCell>
-                    <TableCell>{row.id}</TableCell>
-                    <TableCell>{row.last_name}</TableCell>
-                    <TableCell>{}</TableCell>
-                    <TableCell>{}</TableCell>
+
+                    <TableCell>{row.artist}</TableCell>
+                    <TableCell>{row.views}</TableCell>
                   </TableRow>
                 ))}
               {emptyRows > 0 && (

@@ -1,1 +1,1 @@
-export const apiUrl = 'https://reqres.in/api/';
+export const apiUrl = '/movies/pagination';

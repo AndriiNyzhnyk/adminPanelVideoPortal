@@ -6,7 +6,7 @@ export const get = id => makeRequest({
 }).then(json => movie.parse(json.data));
 
 export const getAll = ({ start = 0, limit = 10, search, sort } = {}) => makeRequest({
-  url: 'users',
+  url: '',
   params: { search, start, limit, sort },
 }).then(json => ({
   data: json.data.map(movie.parse),
