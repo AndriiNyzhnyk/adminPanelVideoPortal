@@ -193,7 +193,7 @@ export default function MoviesTable({ items, setOptions, setSearch }) {
           </Table>
         </div>
         <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
+          rowsPerPageOptions={[5, 10, 25, 50, 100, 200]}
           component="div"
           count={items.total}
           rowsPerPage={rowsPerPage}
