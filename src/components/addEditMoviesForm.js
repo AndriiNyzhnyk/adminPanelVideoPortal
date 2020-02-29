@@ -143,18 +143,6 @@ const AddEditMovie = ({values, saveData, clearFields, changeValueField}) => {
             </div>
 
             <div className="form-group">
-                <label htmlFor="category">Category:</label>
-                <input type="text"
-                       className="form-control"
-                       name="category"
-                       value={values['category']}
-                       onChange={changeValueField}
-                       required
-                       autoComplete="off"
-                />
-            </div>
-
-            <div className="form-group">
                 <label htmlFor="producer">Producer:</label>
                 <input type="text"
                        className="form-control"

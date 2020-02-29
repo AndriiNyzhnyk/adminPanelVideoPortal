@@ -23,16 +23,15 @@ myState.addEditMovieForm = {
         nameEn: '',
         sourceImg: '',
         sourceVideo: '',
-        qualityVideo: '144', // default value 144p
+        qualityVideo: 144, // default value 144p
         translation: '',
         motto: '',
-        year: '2000 ', // default value 2000
+        year: 2000 , // default value 2000
         country: '',
         genre: '',
-        category: '',
         producer: '',
         duration: '',
-        age: '12', // default value 12
+        age: 12, // default value 12
         firstRun: ''
     }
 };
@@ -118,7 +117,7 @@ function reducer(state = myState, action) {
         case 'saveNewMovie': {
             console.log('save reducer');
 
-            fetch('/new-movies', {
+            fetch('/new-movie', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'
