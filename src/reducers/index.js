@@ -1,5 +1,22 @@
 const myState = Object.create(null);
 
+const defaultValuesForMovieForm = {
+    nameUa: '',
+    nameEn: '',
+    sourceImg: '',
+    sourceVideo: '',
+    qualityVideo: 144, // default value 144p
+    translation: '',
+    motto: '',
+    year: 2000, // default value 2000
+    country: '',
+    genre: '',
+    producer: '',
+    duration: '',
+    age: 12, // default value 12
+    firstRun: ''
+};
+
 myState.movieUpload = {
     show: false,
     textWhenOpen: 'Close Upload movie form',
@@ -18,22 +35,7 @@ myState.addEditMovieForm = {
     show: false,
     textWhenOpen: 'Close form',
     textWhenClose: 'Open form',
-    values: {
-        nameUa: '',
-        nameEn: '',
-        sourceImg: '',
-        sourceVideo: '',
-        qualityVideo: 144, // default value 144p
-        translation: '',
-        motto: '',
-        year: 2000 , // default value 2000
-        country: '',
-        genre: '',
-        producer: '',
-        duration: '',
-        age: 12, // default value 12
-        firstRun: ''
-    }
+    values: defaultValuesForMovieForm
 };
 
 function reducer(state = myState, action) {
@@ -130,7 +132,11 @@ function reducer(state = myState, action) {
                 return state;
             }).catch(console.error);
 
-            return state;
+            const addEditMovieForm = {...state.addEditMovieForm};
+            addEditMovieForm.values = defaultValuesForMovieForm;
+            addEditMovieForm.show = false;
+
+            return {...state, addEditMovieForm};
         }
 
         case 'clearAllFieldsAddEditForm': {
