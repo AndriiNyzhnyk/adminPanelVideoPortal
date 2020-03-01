@@ -168,7 +168,7 @@ export default function MoviesTable({ items, setOptions, setSearch }) {
                   <TableRow
                     hover
                     tabIndex={-1}
-                    key={row.id}
+                    key={row._id}
                   >
                     <TableCell scope="row" padding="none">
                       <div className={classes.cover}>
