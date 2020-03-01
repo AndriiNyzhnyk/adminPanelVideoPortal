@@ -116,13 +116,15 @@ function reducer(state = myState, action) {
 
         case 'saveNewMovie': {
             console.log('save reducer');
+            let data = state.addEditMovieForm.values;
+            data.genre = data.genre.split(',').map(item => item.trim());
 
             fetch('/new-movie', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json; charset=utf-8'
                 },
-                body: JSON.stringify(state.addEditMovieForm.values)
+                body: JSON.stringify(data)
             }).then((data) => {
                 console.log(data);
                 return state;
