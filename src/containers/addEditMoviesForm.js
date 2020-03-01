@@ -20,10 +20,14 @@ const mapDispatchToProps = (dispatch) => {
         },
 
         changeValueField: (e) => {
-            const data = {
+            let data = {
                 name: e.target.name,
-                value: e.target.value
+                value: null
             };
+
+            data.value = (e.target.type === 'number' || e.target.nodeName === 'SELECT') ?
+                Number.parseInt(e.target.value, 10) :
+                e.target.value;
 
             dispatch(changeFieldsAddEditForm(data));
         }
