@@ -95,7 +95,7 @@ function reducer(state = myState, action) {
 
             console.log('prevState', prevState);
 
-            return {...state, fileUpload: prevState};
+            return {...state, imageUpload: prevState};
         }
 
         case 'sendImageToServer': {
