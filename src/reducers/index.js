@@ -5,15 +5,16 @@ const defaultValuesForMovieForm = {
     nameEn: '',
     sourceImg: '',
     sourceVideo: '',
-    qualityVideo: 144, // default value 144p
+    qualityVideo: 144,
     translation: '',
     motto: '',
-    year: 2000, // default value 2000
+    year: 2000,
     country: '',
-    genre: '',
+    genres: '',
+    artists: '',
     producer: '',
     duration: '',
-    age: 12, // default value 12
+    age: 12,
     firstRun: ''
 };
 
@@ -119,7 +120,8 @@ function reducer(state = myState, action) {
         case 'saveNewMovie': {
             console.log('save reducer');
             let data = state.addEditMovieForm.values;
-            data.genre = data.genre.split(',').map(item => item.trim());
+            data.genres = data.genres.split(',').map(item => item.trim()).filter(item => item !== '');
+            data.artists = data.artists.split(',').map(item => item.trim()).filter(item => item !== '');
 
             fetch('/new-movie', {
                 method: 'POST',

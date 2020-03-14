@@ -131,11 +131,23 @@ const AddEditMovie = ({values, saveData, clearFields, changeValueField}) => {
             </div>
 
             <div className="form-group">
-                <label htmlFor="genre">Genre:</label>
+                <label htmlFor="genres">Genres:</label>
                 <input type="text"
                        className="form-control"
-                       name="genre"
-                       value={values['genre']}
+                       name="genres"
+                       value={values['genres']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="artists">Artists:</label>
+                <input type="text"
+                       className="form-control"
+                       name="artists"
+                       value={values['artists']}
                        onChange={changeValueField}
                        required
                        autoComplete="off"
