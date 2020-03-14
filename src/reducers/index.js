@@ -15,7 +15,8 @@ const defaultValuesForMovieForm = {
     producer: '',
     duration: '',
     age: 12,
-    firstRun: ''
+    firstRun: '',
+    description: ''
 };
 
 myState.movieUpload = {
@@ -119,9 +120,11 @@ function reducer(state = myState, action) {
 
         case 'saveNewMovie': {
             console.log('save reducer');
-            let data = state.addEditMovieForm.values;
+            let data = Object.assign(Object.create(null), state.addEditMovieForm.values);
+            console.log('data', data);
             data.genres = data.genres.split(',').map(item => item.trim()).filter(item => item !== '');
             data.artists = data.artists.split(',').map(item => item.trim()).filter(item => item !== '');
+            data.firstRun = new Date(data.firstRun).toISOString();
 
             fetch('/new-movie', {
                 method: 'POST',

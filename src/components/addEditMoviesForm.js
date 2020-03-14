@@ -206,6 +206,18 @@ const AddEditMovie = ({values, saveData, clearFields, changeValueField}) => {
                 />
             </div>
 
+            <div className="form-group">
+                <label htmlFor="description">Description:</label>
+                <input type="text"
+                       className="form-control"
+                       name="description"
+                       value={values['description']}
+                       onChange={changeValueField}
+                       required
+                       autoComplete="off"
+                />
+            </div>
+
             <div className="panel-body">
                 <button type="button" className="resolve" onClick={saveData}>Save</button>
                 <button type="button" className="reject" onClick={clearFields}>reject</button>
