@@ -39,7 +39,6 @@ const headCells = [
   { id: 'nameUa', numeric: false, disablePadding: false, label: 'NameUA' },
   { id: 'producer', numeric: true, disablePadding: false, label: 'Producer' },
   { id: 'year', numeric: true, disablePadding: false, label: 'Year' },
-  { id: 'artist', numeric: false, disablePadding: false, label: 'Artist' },
   { id: 'views', numeric: false, disablePadding: false, label: 'Views' },
 ];
 
@@ -179,8 +178,6 @@ export default function MoviesTable({ items, setOptions, setSearch }) {
                     <TableCell scope="row">{row.nameUa}</TableCell>
                     <TableCell>{row.producer}</TableCell>
                     <TableCell>{row.year}</TableCell>
-
-                    <TableCell>{row.artist}</TableCell>
                     <TableCell>{row.views}</TableCell>
                   </TableRow>
                 ))}
